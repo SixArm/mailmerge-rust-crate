@@ -1,0 +1,25 @@
+[package]
+name = "mailmerge"
+version = "0.0.1"
+edition = "2021"
+description = "MailMerge Rust Crate: work in progress for building a mail merge tool to send emails."
+readme = "README.md"
+repository = "https://github.com/sixarm/mailmerge-rust-crate/"
+license = "MIT OR Apache-2.0 OR GPL-2.0 OR GPL-3.0 OR AGPL-3.0"
+keywords = ["email", "mail", "merge", "smtp"]
+categories = ["email", "command-line-utilities"]
+
+[dependencies]
+## Starter
+assertables = { version = "9.3.0" } # Assert macros for testing and runtime in production.
+confy = { version = "0.6.1" } # Configuration management.
+clap = { version = "4.5.20", features = ["string", "wrap_help"] } # Command Line Argument Parser
+env_logger = { version = "0.9.3" } # A logger that can be configured via environment variables.
+indoc = { version = "2.0.5" } # Indented document literals.
+map = { version = "1.3.0" } # The map! macro for creating map collections.
+log = { version = "0.4.22" } # Lightweight logging facade.
+thiserror = { version = "1.0.64" } # Error derive macro for the standard library’s std::error::Error trait.
+serde = { version = "1.0.210", features = ["derive"] } # Serialize/deserialize framework.
+tokio = { version = "1.39.3", features = ["full"] } # Event-driven, non-blocking I/O platform.
+## Specific
+lettre = { version = "0.11.10" } #  Email client mailer library.
